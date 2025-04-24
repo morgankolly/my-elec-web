@@ -1,7 +1,7 @@
 header {
     display: flex;
-    text-decoration: antiquewhite;
-    background-color: #041e05; /* Green background */
+    text-decoration: rgb(14, 104, 7);
+    background-color: #15b246; /* Green background */
     padding: 10px 7px; 
     justify-content: space-between;
     position: static;
