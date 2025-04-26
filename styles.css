@@ -1,18 +1,14 @@
 header {
     display: flex;
-    text-decoration: rgb(14, 104, 7);
-    background-color: #084814; /* Green background */
-    padding: 10px 7px; 
+    text-decoration: rgb(33, 176, 33);
+    background-color:transparent; /* Green background */
+    padding: 1px 7px; 
     justify-content: space-between;
     position: static;
-    text-align: ; 
+    text-align: center; 
 }
-
-
-
-
   .btn-bd-primary {
-    --bd-violet-bg: #025a25;
+    --bd-violet-bg: #083219;
     --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
     --bs-btn-font-weight: 600;
@@ -20,12 +16,12 @@ header {
     --bs-btn-bg: var(--bd-violet-bg);
     --bs-btn-border-color: var(--bd-violet-bg);
     --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #6528e0;
-    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-hover-bg: #05361e;
+    --bs-btn-hover-border-color: #134e07;
     --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
     --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #5a23c8;
-    --bs-btn-active-border-color: #5a23c8;
+    --bs-btn-active-bg: #07380d;
+    --bs-btn-active-border-color: #083d1b;
   }
 
   .bd-mode-toggle {
@@ -40,4 +36,26 @@ header {
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
   }
- 
+  .navbar-brand{ 
+    color: rgb(4, 173, 57) rgb(10, 114, 43);
+    padding: 3px;
+    margin: 30px 60px;
+    font-size: 60px;
+  }
+  .nav-link{
+    display: flex;
+    justify-content: center;
+    color: rgb(9, 3, 3);
+    margin: 20px;
+    padding: 50px;
+
+
+  }
+  body{
+    background-color: #ffffff;
+  }
+  .d-flex{
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 2px;
+  }
