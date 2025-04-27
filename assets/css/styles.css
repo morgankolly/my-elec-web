@@ -1,6 +1,6 @@
 header {
     display: flex;
-    text-decoration: rgb(33, 176, 33);
+    text-decoration: rgb(16, 168, 16);
     background-color:transparent; /* Green background */
     padding: 1px 7px; 
     justify-content: space-between;
@@ -59,3 +59,15 @@ header {
     background-color: transparent;
     border-radius: 2px;
   }
+  .bd-placeholder-img{
+    background-color: rgb(149, 211, 185);
+    padding: 2px;
+  }
+  main{
+    background-color: rgb(251, 251, 251);
+  }
+
+
+
+
+  
