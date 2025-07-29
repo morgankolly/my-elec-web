@@ -1,73 +1,45 @@
-header {
-    display: flex;
-    text-decoration: rgb(16, 168, 16);
-    background-color:transparent; /* Green background */
-    padding: 1px 7px; 
-    justify-content: space-between;
-    position: static;
-    text-align: center; 
-}
-  .btn-bd-primary {
-    --bd-violet-bg: #083219;
-    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet-bg);
-    --bs-btn-border-color: var(--bd-violet-bg);
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #05361e;
-    --bs-btn-hover-border-color: #134e07;
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #07380d;
-    --bs-btn-active-border-color: #083d1b;
-  }
-
-  .bd-mode-toggle {
-    z-index: 1500;
-  }
-
-  .bd-mode-toggle .bi {
-    width: 1em;
-    height: 1em;
-  }
-
-  .bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
-  }
-  .navbar-brand{ 
-    color: rgb(4, 173, 57) rgb(10, 114, 43);
-    padding: 3px;
-    margin: 30px 60px;
-    font-size: 60px;
-  }
-  .nav-link{
-    display: flex;
-    justify-content: center;
-    color: rgb(9, 3, 3);
-    margin: 20px;
-    padding: 50px;
-
-
-  }
-  body{
-    background-color: #ffffff;
-  }
-  .d-flex{
-    justify-content: center;
-    background-color: transparent;
-    border-radius: 2px;
-  }
-  .bd-placeholder-img{
-    background-color: rgb(149, 211, 185);
-    padding: 2px;
-  }
-  main{
-    background-color: rgb(251, 251, 251);
-  }
-
-
-
-
-  
+.login-container {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .login-container.active {
+            max-height: 400px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            z-index: 10;
+        }.prev { left: 0; }
+        .next { right: 0; }
+        .slider-indicators {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }.slider-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .slider-indicator.active {
+            background: #333;
+        }
