@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Light Up Electrical Services</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/"></script>
     <script src="assets/js/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -113,27 +112,60 @@
     </section>
 
   
-     <!-- Photo Slider Section -->
-
-    <div class="slider-container">
-    <div class="slider-track" id="sliderTrack">
-        <div class="slide"> <!-- Slide 1 -->
-            <img src="assets/photos/man-engaged-household-task.jpg" alt="Slide 1">
+     <section class="gallery-container">
+        <h2 class="gallery-title">Photo Gallery</h2>
+        <div class="photo-gallery">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item" onclick="openLightbox('img1', 'Beautiful Landscape')">
+                <img src="https://source.unsplash.com/random/600x400?nature=1" alt="Nature" class="gallery-image" id="img1">
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item" onclick="openLightbox('img2', 'City Skyline')">
+                <img src="https://source.unsplash.com/random/600x400?city=1" alt="City" class="gallery-image" id="img2">
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item" onclick="openLightbox('img3', 'Ocean View')">
+                <img src="https://source.unsplash.com/random/600x400?ocean=1" alt="Ocean" class="gallery-image" id="img3">
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item" onclick="openLightbox('img4', 'Mountain Range')">
+                <img src="https://source.unsplash.com/random/600x400?mountain=1" alt="Mountain" class="gallery-image" id="img4">
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item" onclick="openLightbox('img5', 'Wildlife')">
+                <img src="https://source.unsplash.com/random/600x400?animal=1" alt="Animal" class="gallery-image" id="img5">
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item" onclick="openLightbox('img6', 'Architecture')">
+                <img src="https://source.unsplash.com/random/600x400?building=1" alt="Building" class="gallery-image" id="img6">
+            </div>
+            
+            <!-- Gallery Item 7 -->
+            <div class="gallery-item" onclick="openLightbox('img7', 'Sunset')">
+                <img src="https://source.unsplash.com/random/600x400?sunset=1" alt="Sunset" class="gallery-image" id="img7">
+            </div>
+            
+            <!-- Gallery Item 8 -->
+            <div class="gallery-item" onclick="openLightbox('img8', 'Beach')">
+                <img src="https://source.unsplash.com/random/600x400?beach=1" alt="Beach" class="gallery-image" id="img8">
+            </div>
+            
+            <!-- Gallery Item 9 -->
+            <div class="gallery-item" onclick="openLightbox('img9', 'Forest')">
+                <img src="https://source.unsplash.com/random/600x400?forest=1" alt="Forest" class="gallery-image" id="img9">
+            </div>
+            
+            <!-- Gallery Item 10 -->
+            <div class="gallery-item" onclick="openLightbox('img10', 'Desert')">
+                <img src="https://source.unsplash.com/random/600x400?desert=1" alt="Desert" class="gallery-image" id="img10">
+            </div>
         </div>
-        <div class="slide"> <!-- Slide 2 -->
-            <!-- <img src="assets/photos/10074657.jpg" alt="Slide 2"> -->
-        </div>
-        <!-- Add more slides as needed -->
-    </div>
-    <div class="slider-indicators">
-        <span class="slider-indicator"></span>
-        <span class="slider-indicator"></span>
-        <!-- Add more indicators as needed -->
-    </div>
-    <button class="slider-nav prev" onclick="prevSlide()">Prev</button>
-    <button class="slider-nav next" onclick="nextSlide()">Next</button>
-</div>
-
+    </section>
 
     <!-- CTA Section -->
     <section class="py-16 bg-blue-50">
