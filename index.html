@@ -1,98 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Up Electrical Services</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 </head>
-<body>
-  <header>
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-        id="bd-theme"
-        type="button"
-        aria-expanded="false"
-        data-bs-toggle="dropdown"
+<body class="bg-gray-100 font-sans">
+    <!-- Header with Login Button -->
+    <header class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bolt text-yellow-400 text-3xl mr-3"></i>
+                <h1 class="text-2xl font-bold">Light Up</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-yellow-400">Home</a>
+                <a href="#" class="hover:text-yellow-400">Services</a>
+                <a href="#" class="hover:text-yellow-400">About Us</a>
+                <a href="#" class="hover:text-yellow-400">Contact</a>
+                <button id="loginToggle" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Customer Login</button>
+            </nav>
+            <button class="md:hidden text-2xl" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
         
-        aria-label="Toggle theme (auto)">
-  <svg class="bi my-1 theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg>
-  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-</button>
-<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-  <li>
-    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>
-      Light
-      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-    </button>
-  </li>
-  <li>
-    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>
-      Dark
-      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-    </button>
-  </li>
-  <li>
-    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-      <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg>
-      Auto
-      <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
-    </button>
-  </li>
-</ul>
-    </div>
-<nav class="navbar navbar-expand-md mb-10">
-  <div class="container">
-    <a class="navbar-brand" href="#">MORELECTRO SOLUTIONS   </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="#">ABOUT US</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="true">CONTACT US</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="true">PROJECTS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="true">CAREERS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="true"> CUSTOMERS</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-</header>
-<main class="hero">
-  <div class="b-example-divider"></div>
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="assets/photos/37672.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="800" height="500" loading="lazy">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">ALL YOUR SOLUTIONS FOR DOMESTIC AND INDUSTRIAL ELECTRICAL WORK</h1>
-        <p class="lead">Connect with proffesionals in all your electrical problems and work</p>
-      </div>
-    </div>
-  </div>
-</main>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-blue-800 px-6 py-2">
+            <a href="#" class="block py-2 hover:text-yellow-400">Home</a>
+            <a href="#" class="block py-2 hover:text-yellow-400">Services</a>
+            <a href="#" class="block py-2 hover:text-yellow-400">About Us</a>
+            <a href="#" class="block py-2 hover:text-yellow-400">Contact</a>
+            <button id="mobileLoginToggle" class="w-full bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition duration-300 mt-2 mb-2">Customer Login</button>
+        </div>
+        
+        <!-- Login Container -->
+        <div id="loginContainer" class="login-container bg-blue-800">
+            <form class="max-w-md mx-auto">
+                <h3 class="text-xl font-bold text-yellow-400 mb-4">Customer Login</h3>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="username">Username or Email</label>
+                    <input class="w-full px-3 py-2 rounded bg-blue-700 border border-blue-600 text-white focus:outline-none focus:border-yellow-400" type="text" id="username" placeholder="Enter your username or email">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-white mb-2" for="password">Password</label>
+                    <input class="w-full px-3 py-2 rounded bg-blue-700 border border-blue-600 text-white focus:outline-none focus:border-yellow-400" type="password" id="password" placeholder="Enter your password">
+                </div>
+                <div class="flex items-center justify-between mb-4">
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Sign In</button>
+                    <a href="#" class="text-yellow-400 hover:text-yellow-300 text-sm">Forgot Password?</a>
+                </div>
+                <p class="text-gray-300 text-sm">Don't have an account? <a href="#" class="text-yellow-400 hover:text-yellow-300">Register here</a></p>
+            </form>
+        </div>
+    </header>
+
+    <!-- Hero Section with Three Cards -->
+    <section class="relative">
+     <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 px-6">
+        <div class="container mx-auto">
+          <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">Powering Your Home with Safety and Efficiency</h2>
+              <p class="text-xl mb-8">Trusted electrical installation and maintenance services for your home and business</p>
+              <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">Get a Free Quote</a>
+        </div>
+                
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-blue-500 transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="text-yellow-400 text-4xl mb-4">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Residential Services</h3>
+                        <p class="mb-4">Professional installation, repair, and maintenance for all your home electrical needs.</p>
+                        <a href="#" class="text-yellow-400 hover:text-yellow-300 font-semibold inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-blue-500 transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="text-yellow-400 text-4xl mb-4">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Contract Services</h3>
+                        <p class="mb-4">Custom electrical solutions for construction projects and commercial properties.</p>
+                        <a href="#" class="text-yellow-400 hover:text-yellow-300 font-semibold inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-blue-500 transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="text-yellow-400 text-4xl mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Energy Solutions</h3>
+                        <p class="mb-4">Upgrade to energy-efficient lighting and smart home electrical systems.</p>
+                        <a href="#" class="text-yellow-400 hover:text-yellow-300 font-semibold inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+     <section class="gallery-container">
+        <h2 class="gallery-title">Photo Gallery</h2>
+        <div class="photo-gallery">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item" onclick="openLightbox('img1', 'Beautiful Landscape')">
+                <img src="https://source.unsplash.com/random/600x400?nature=1" alt="Nature" class="gallery-image" id="img1">
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item" onclick="openLightbox('img2', 'City Skyline')">
+                <img src="https://source.unsplash.com/random/600x400?city=1" alt="City" class="gallery-image" id="img2">
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item" onclick="openLightbox('img3', 'Ocean View')">
+                <img src="https://source.unsplash.com/random/600x400?ocean=1" alt="Ocean" class="gallery-image" id="img3">
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item" onclick="openLightbox('img4', 'Mountain Range')">
+                <img src="https://source.unsplash.com/random/600x400?mountain=1" alt="Mountain" class="gallery-image" id="img4">
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item" onclick="openLightbox('img5', 'Wildlife')">
+                <img src="https://source.unsplash.com/random/600x400?animal=1" alt="Animal" class="gallery-image" id="img5">
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item" onclick="openLightbox('img6', 'Architecture')">
+                <img src="https://source.unsplash.com/random/600x400?building=1" alt="Building" class="gallery-image" id="img6">
+            </div>
+            
+            <!-- Gallery Item 7 -->
+            <div class="gallery-item" onclick="openLightbox('img7', 'Sunset')">
+                <img src="https://source.unsplash.com/random/600x400?sunset=1" alt="Sunset" class="gallery-image" id="img7">
+            </div>
+            
+            <!-- Gallery Item 8 -->
+            <div class="gallery-item" onclick="openLightbox('img8', 'Beach')">
+                <img src="https://source.unsplash.com/random/600x400?beach=1" alt="Beach" class="gallery-image" id="img8">
+            </div>
+            
+            <!-- Gallery Item 9 -->
+            <div class="gallery-item" onclick="openLightbox('img9', 'Forest')">
+                <img src="https://source.unsplash.com/random/600x400?forest=1" alt="Forest" class="gallery-image" id="img9">
+            </div>
+            
+            <!-- Gallery Item 10 -->
+            <div class="gallery-item" onclick="openLightbox('img10', 'Desert')">
+                <img src="https://source.unsplash.com/random/600x400?desert=1" alt="Desert" class="gallery-image" id="img10">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6">Ready to Power Up Your Property?</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Our certified electricians are ready to handle all your electrical needs with the highest standards of safety and quality.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">Book a Service</a>
+                <a href="#" class="bg-white hover:bg-gray-100 text-blue-900 border border-blue-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">Contact Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-bolt text-yellow-400 mr-2"></i> Voltix Solutions
+                    </h3>
+                    <p class="text-gray-400">Providing safe and reliable electrical services since 2005.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Electrical Installations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Wiring & Rewiring</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Safety Inspections</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Emergency Repairs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Smart Home Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <address class="not-italic text-gray-400 space-y-2">
+                        <p><i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i> 123 Electric Ave, Power City</p>
+                        <p><i class="fas fa-phone text-yellow-400 mr-2"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope text-yellow-400 mr-2"></i> info@voltixsolutions.com</p>
+                        <p><i class="fas fa-clock text-yellow-400 mr-2"></i> Mon-Fri: 8AM - 6PM</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>© 2023 Voltix Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </html>
+
