@@ -1,8 +1,27 @@
+body{
+    background-color: rgb(19, 19, 237);
+    padding: 10px;
+}
+header{
+    display: flex;
+    border:transparent;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px   ;
+}
+.hero{
+    display: flex;
+    margin: auto;
+    border: transparent;
+    border-radius: 10px;
+    cursor: progress;
+}
+
 .login-container {
             transition: all 0.3s ease;
             max-height: 0;
             overflow: hidden;
-        }
+}
         .login-container.active {
             max-height: 400px;
             padding: 1.5rem;
@@ -43,10 +62,6 @@
         .slider-indicator.active {
             background: #333;
         }
-
-
-
-
 
         * {
             box-sizing: border-box;
