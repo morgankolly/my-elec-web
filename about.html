@@ -1,108 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BrightVolt Electric</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Simple slider */
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .slider img {
-      width: 100%;
-      flex-shrink: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Light Up</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-
-  <!-- Header -->
-  <header class="bg-white shadow-md p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-blue-600">BrightVolt Electric</h1>
-    <nav class="space-x-4">
-      <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
-      <a href="#login" class="text-gray-700 hover:text-blue-600">Login</a>
-      <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section with 3 Cards -->
-  <section class="bg-blue-600 text-white py-16">
-    <div class="text-center mb-10">
-      <h2 class="text-4xl font-bold mb-4">Powering Your Home, Safely</h2>
-      <p class="text-lg">We provide domestic installations, repairs, and contract-based electrical services.</p>
-    </div>
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-4">
-      <div class="bg-white text-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg">
-        <h3 class="text-xl font-bold mb-2">Domestic Installations</h3>
-        <p>Safe wiring, lighting, sockets, and appliances professionally installed.</p>
-      </div>
-      <div class="bg-white text-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg">
-        <h3 class="text-xl font-bold mb-2">Electrical Repairs</h3>
-        <p>We fix wiring faults, circuit issues, and emergency breakdowns fast.</p>
-      </div>
-      <div class="bg-white text-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg">
-        <h3 class="text-xl font-bold mb-2">Contract Work</h3>
-        <p>Large-scale electrical contracts for homes, estates, and apartments.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Photo Slider -->
-  <section class="py-16 bg-gray-100">
-    <h2 class="text-3xl font-semibold text-center mb-8">Our Work</h2>
-    <div class="relative max-w-4xl mx-auto overflow-hidden rounded-lg">
-      <div id="slider" class="slider w-full">
-        <img src="https://via.placeholder.com/800x400?text=Photo+1" alt="Project 1">
-        <img src="https://via.placeholder.com/800x400?text=Photo+2" alt="Project 2">
-        <img src="https://via.placeholder.com/800x400?text=Photo+3" alt="Project 3">
-        <img src="https://via.placeholder.com/800x400?text=Photo+4" alt="Project 4">
-        <img src="https://via.placeholder.com/800x400?text=Photo+5" alt="Project 5">
-      </div>
-    </div>
-    <script>
-      let current = 0;
-      const slider = document.getElementById('slider');
-      const images = slider.children.length;
-      setInterval(() => {
-        current = (current + 1) % images;
-        slider.style.transform = `translateX(-${current * 100}%)`;
-      }, 3000);
-    </script>
-  </section>
-
-  <!-- Login Section -->
-  <section id="login" class="py-16">
-    <div class="max-w-md mx-auto bg-white shadow-lg p-8 rounded-lg">
-      <h2 class="text-2xl font-bold mb-6 text-center">Client Login</h2>
-      <form class="space-y-4">
-        <div>
-          <label class="block mb-1 font-medium">Email</label>
-          <input type="email" placeholder="you@example.com" class="w-full px-4 py-2 border rounded-lg" required>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Light Up</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div>
-          <label class="block mb-1 font-medium">Password</label>
-          <input type="password" placeholder="Enter password" class="w-full px-4 py-2 border rounded-lg" required>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Light Up</h1>
+            <p>Illuminating your world with innovative lighting solutions since 2018</p>
         </div>
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Login</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="bg-blue-600 text-white py-12 text-center">
-    <h3 class="text-2xl font-semibold mb-2">Need a Quote?</h3>
-    <p class="mb-4">Email us: <a href="mailto:info@brightvolt.co.ug" class="underline">info@brightvolt.co.ug</a></p>
-    <p>Or call us at +256 700 123 456</p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 py-6 text-center">
-    &copy; 2025 BrightVolt Electric. All rights reserved.
-  </footer>
-
+    </section>
+    
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Creating Brighter Spaces for Over a Decade</h3>
+                    <p>Founded in 2018, Light Up began as a small family business with a passion for innovative lighting design. What started as a modest operation with just three employees has grown into a leading lighting solutions provider with over 50 dedicated professionals.</p>
+                    <p>Our journey has been guided by a commitment to quality, sustainability, and customer satisfaction. We believe that lighting isn't just about illumination—it's about creating atmospheres, enhancing spaces, and improving lives.</p>
+                    <p>Today, we serve both residential and commercial clients across the country, offering custom lighting solutions that combine functionality with aesthetic appeal.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Our office">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Cards Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+            </div>
+            <div class="team-cards">
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Sarah Johnson">
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Sarah Johnson</h3>
+                        <p>Founder & CEO</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Michael Chen">
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Michael Chen</h3>
+                        <p>Lead Designer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Emily Rodriguez">
+                    </div>
+                    <div class="team-card-content">
+                        <h3>Emily Rodriguez</h3>
+                        <p>Project Manager</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="David Wilson">
+                    </div>
+                    <div class="team-card-content">
+                        <h3>David Wilson</h3>
+                        <p>Technical Director</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Work</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 1">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 2">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 3">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 4">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 5">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Project 6">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Slider Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>In Action</h2>
+            </div>
+            <div class="video-slider">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/9xwazD5SyVg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-slider-nav">
+                    <button class="active"></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>12+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Team Members</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Satisfied Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Light Up</h3>
+                    <p>Providing innovative lighting solutions for residential and commercial spaces since 2018.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential Lighting</a></li>
+                        <li><a href="#">Commercial Lighting</a></li>
+                        <li><a href="#">Smart Home Solutions</a></li>
+                        <li><a href="#">Energy Efficiency</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Lighting Ave, Bright City</p>
+                    <p><i class="fas fa-phone"></i>+256 755 216 481</p>
+                    <p><i class="fas fa-envelope"></i>lightup@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Sun-Fri: 9AM - 6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Light Up. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
