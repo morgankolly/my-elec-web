@@ -98,3 +98,27 @@
         alert('Thank you for your message! We will get back to you soon.');
         this.reset();
     });
+
+
+        // Simple video slider functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoButtons = document.querySelectorAll('.video-slider-nav button');
+            const videoContainer = document.querySelector('.video-container iframe');
+            
+            const videos = [
+                'https://www.youtube.com/embed/9xwazD5SyVg',
+                'https://www.youtube.com/embed/dQw4w9WgXcQ',
+                'https://www.youtube.com/embed/jNQXAC9IVRw'
+            ];
+            
+            videoButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    videoButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Change video
+                    videoContainer.src = videos[index];
+                });
+            });
+        });

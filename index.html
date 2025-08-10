@@ -3,334 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light Up Electrical Services</title>
+    <title>Light Up Electric - Professional Electrical Services</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/script.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="code.php">
 </head>
-<body class="bg-gray-100 font-sans">
-    <!-- Header with Login Button -->
-    <header class="bg-blue-900 text-white shadow-lg">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <i class="fas fa-bolt text-yellow-400 text-3xl mr-3"></i>
-                <h1 class="text-2xl font-bold">Light Up</h1>
-            </div>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#" class="hover:text-yellow-400">Home</a>
-                <a href="#" class="hover:text-yellow-400">Services</a>
-                <a href="#" class="hover:text-yellow-400">About Us</a>
-                <a href="#" class="hover:text-yellow-400">Contact</a>
-                <button id="loginToggle" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out">Customer Login</button>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Light Up Electric</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+
+                </ul>
             </nav>
-            <button class="md:hidden text-2xl" id="mobileMenuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-blue-800 px-6 py-2">
-            <a href="#" class="block py-2 hover:text-yellow-400">Home</a>
-            <a href="#" class="block py-2 hover:text-yellow-400">Services</a>
-            <a href="#" class="block py-2 hover:text-yellow-400">About Us</a>
-            <a href="#" class="block py-2 hover:text-yellow-400">Contact</a>
-            <button id="mobileLoginToggle" class="w-full bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition duration-300 mt-2 mb-2">Customer Login</button>
-        </div>
-        
-        <!-- Login Container -->
-        <div id="loginContainer" class="login-container bg-blue-800">
-            <form class="max-w-md mx-auto">
-                <h3 class="text-xl font-bold text-yellow-400 mb-4">Customer Login</h3>
-                <div class="mb-4">
-                    <label class="block text-white mb-2" for="username">Username or Email</label>
-                    <input class="w-full px-3 py-2 rounded bg-blue-700 border border-blue-600 text-white focus:outline-none focus:border-yellow-400" type="text" id="username" placeholder="Enter your username or email">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-white mb-2" for="password">Password</label>
-                    <input class="w-full px-3 py-2 rounded bg-blue-700 border border-blue-600 text-white focus:outline-none focus:border-yellow-400" type="password" id="password" placeholder="Enter your password">
-                </div>
-                <div class="flex items-center justify-between mb-4">
-                    <button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">Sign In</button>
-                    <a href="#" class="text-yellow-400 hover:text-yellow-300 text-sm">Forgot Password?</a>
-                </div>
-                <p class="text-gray-300 text-sm">Don't have an account? <a href="#" class="text-yellow-400 hover:text-yellow-300">Register here</a></p>
-            </form>
         </div>
     </header>
-
     <section class="hero">
-     <div class="bg-gradient-to-r from-blue-900 to-white-900 text-white py-16 px-6">
-        <div class="container mx-auto">
-          <div class="max-w-3xl mx-auto text-center mb-12">
-            <h2 class="text-4xl font-bold mb-4">Powering Your Home with Safety and Efficiency</h2>
-              <p class="text-xl mb-8">Trusted electrical installation and maintenance services for your home and business</p>
-              <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">Get a Free Quote</a>
+        <div class="container">
+            <h1>Professional Electrical Services</h1>
+            <p>Light Up Electric provides reliable, safe, and efficient electrical solutions for residential and commercial properties. Our certified electricians are ready to handle all your electrical needs.</p>
+            <a href="#" class="btn">Get a Free Quote</a>
         </div>
-                
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
-                    <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-blue-500 transform hover:scale-105 transition duration-300 ease-in-out">
-                        <div class="text-yellow-400 text-4xl mb-4">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Residential Services</h3>
-                        <p class="mb-4">Professional installation, repair, and maintenance for all your home electrical needs.</p>
-                        <a href="#" class="text-yellow-400 hover:text-yellow-300 font-semibold inline-flex items-center">
-                            Learn More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="assets/photos/Untitled.jpg" alt="Electrical Installation">
                     </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-blue-500 transform hover:scale-105 transition duration-300 ease-in-out">
-                        <div class="text-yellow-400 text-4xl mb-4">
-                            <i class="fas fa-file-signature"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Contract Services</h3>
-                        <p class="mb-4">Custom electrical solutions for construction projects and commercial properties.</p>
-                        <a href="#" class="text-yellow-400 hover:text-yellow-300 font-semibold inline-flex items-center">
-                            Learn More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
+                    <div class="card-content">
+                        <h3>Electrical Installation</h3>
+                        <p>Professional installation of electrical systems for new constructions and renovations.</p>
+                        <a href="#" class="btn">Learn More</a>
                     </div>
-                    
-                    <!-- Card 3 -->
-                    <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 border border-blue-500 transform hover:scale-105 transition duration-300 ease-in-out">
-                        <div class="text-yellow-400 text-4xl mb-4">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Energy Solutions</h3>
-                        <p class="mb-4">Upgrade to energy-efficient lighting and smart home electrical systems.</p>
-                        <a href="#" class="text-yellow-400 hover:text-yellow-300 font-semibold inline-flex items-center">
-                            Learn More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="assets/photos/Untitled 4.jpg" alt="Lighting Solutions">
+                    </div>
+                    <div class="card-content">
+                        <h3>Lighting Solutions</h3>
+                        <p>Modern and energy-efficient lighting designs for homes and businesses.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="assets/photos/8.jpg" alt="Emergency Repairs">
+                    </div>
+                    <div class="card-content">
+                        <h3>Emergency Repairs</h3>
+                        <p>24/7 emergency electrical services to keep your home or business safe.</p>
+                        <a href="#" class="btn">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-  
-     <section class="gallery-container">
-         <div class="bg-gradient-to-r from-blue-900 to-white-700 text-black py-16 px-6">
-        <h2 class="gallery-title">Photo Gallery</h2>
-        <div class="photo-gallery">
-            <!-- Gallery Item 1 -->
-            <div class="gallery-item" onclick="openLightbox('img1', 'Beautiful Landscape')">
-                <img src="https://source.unsplash.com/random/600x400?nature=1" alt="Nature" class="gallery-image" id="img1">
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Work</h2>
             </div>
-            
-            <!-- Gallery Item 2 -->
-            <div class="gallery-item" onclick="openLightbox('img2', 'City Skyline')">
-                <img src="https://source.unsplash.com/random/600x400?city=1" alt="City" class="gallery-image" id="img2">
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="assets/photos/Untitled7.jpg" alt="Project 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/Untitled6.jpg" alt="project 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/Untitled 5.jpg" alt="project 3">
+                </div>
+                <div class="gallery-item">
+                   <img src="assets/photos/Untitled 2.jpg" alt="project 4">
+                <div class="gallery-item">
+                    <img src="assets/photos/Untitled 4.jpg" alt="project 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/Untitled.jpg" alt="Project 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/Untitled.jpg" alt="Project 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/Untitled.jpg" alt="Project 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/Untitled.jpg" alt="Project 9">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/Untitled.jpg" alt="Project 10">
+                </div>
             </div>
-            
-            <!-- Gallery Item 3 -->
-            <div class="gallery-item" onclick="openLightbox('img3', 'Ocean View')">
-                <img src="https://source.unsplash.com/random/600x400?ocean=1" alt="Ocean" class="gallery-image" id="img3">
-            </div>
-            
-            <!-- Gallery Item 4 -->
-            <div class="gallery-item" onclick="openLightbox('img4', 'Mountain Range')">
-                <img src="https://source.unsplash.com/random/600x400?mountain=1" alt="Mountain" class="gallery-image" id="img4">
-            </div>
-            
-            <!-- Gallery Item 5 -->
-            <div class="gallery-item" onclick="openLightbox('img5', 'Wildlife')">
-                <img src="https://source.unsplash.com/random/600x400?animal=1" alt="Animal" class="gallery-image" id="img5">
-            </div>
-            
-            <!-- Gallery Item 6 -->
-            <div class="gallery-item" onclick="openLightbox('img6', 'Architecture')">
-                <img src="https://source.unsplash.com/random/600x400?building=1" alt="Building" class="gallery-image" id="img6">
-            </div>
-            
-            <!-- Gallery Item 7 -->
-            <div class="gallery-item" onclick="openLightbox('img7', 'Sunset')">
-                <img src="https://source.unsplash.com/random/600x400?sunset=1" alt="Sunset" class="gallery-image" id="img7">
-            </div>
-            
-            <!-- Gallery Item 8 -->
-            <div class="gallery-item" onclick="openLightbox('img8', 'Beach')">
-                <img src="https://source.unsplash.com/random/600x400?beach=1" alt="Beach" class="gallery-image" id="img8">
-            </div>
-            
-            <!-- Gallery Item 9 -->
-            <div class="gallery-item" onclick="openLightbox('img9', 'Forest')">
-                <img src="https://source.unsplash.com/random/600x400?forest=1" alt="Forest" class="gallery-image" id="img9">
-            </div>
-            
-            <!-- Gallery Item 10 -->
-            <div class="gallery-item" onclick="openLightbox('img10', 'Desert')">
-                <img src="https://source.unsplash.com/random/600x400?desert=1" alt="Desert" class="gallery-image" id="img10">
-            </div>
-        </div>
         </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="py-16 bg-blue-50">
-         <div class="bg-gradient-to-r from-blue-900 to-white-500 text-black py-16 px-6">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-blue-900 mb-6">Ready to Power Up Your Property?</h2>
-            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Our certified electricians are ready to handle all your electrical needs with the highest standards of safety and quality.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#" class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">Book a Service</a>
-                <a href="#" class="bg-white hover:bg-gray-100 text-blue-900 border border-blue-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">Contact Our Team</a>
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
             </div>
-        </div>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>"Light Up Electric did an amazing job rewiring our old house. They were professional, clean, and completed the work ahead of schedule. Highly recommend!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="assets/photos/2103.i203.006.F.m004.c9.electrician cartoon composition.jpg" alt="Gloria Nakato">
+                        </div>
+                        <div class="author-info">
+                            <h>Nakato Gloria</h></h4>
+                            <p>Homeowner</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>"We've used Light Up Electric for all our commercial properties. Their team is reliable and their work is always up to code. Great service!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="assets/photos/10074657.jpg" alt="Kabuubi David">
+                        </div>
+                        <div class="author-info">
+                            <h4>Kabuubi David</h4>
+                            <p>Business Owner</p>
+                            <div class="rating">★★★★☆</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>"I called for an emergency repair at midnight and they had someone here within 45 minutes. Fixed the issue quickly and at a fair price. Will definitely call them again."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="assets/photos/10074657.jpg" alt="Yiga sharif">
+                        </div>
+                        <div class="author-info">
+                            <h4>Yiga sharif</h4>
+                            <p>Apartment Manager</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="contact-section">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p>Have questions or feedback? We'd love to hear from you!</p>
-        
-        <div class="contact-container">
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <h3>Send Us a Message</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+    <section class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
             </div>
-            
-            <!-- Ratings & Comments Section -->
-            <div class="feedback-section">
-                <h3>Share Your Experience</h3>
-                <div class="rating-system">
-                    <p>Rate our service:</p>
-                    <div class="stars">
-                        <span class="star" data-value="1">★</span>
-                        <span class="star" data-value="2">★</span>
-                        <span class="star" data-value="3">★</span>
-                        <span class="star" data-value="4">★</span>
-                        <span class="star" data-value="5">★</span>
-                    </div>
-                    <input type="hidden" id="rating-value" value="0">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Address:</strong>Namasuba near Total 2</p>
+                    <p><strong>Phone:</strong> +256 755 216 481</p>
+                    <p><strong>Email:</strong> info@lightup.com</p>
+                    <p><strong>Hours:</strong> Sunday - Friday: 8am - 6pm<br>Emergency services available 24/7</p>
                 </div>
-                
-                <div class="comment-form">
-                    <div class="form-group">
-                        <label for="comment">Your Review</label>
-                        <textarea id="comment" name="comment" rows="3" placeholder="Share your experience with us..."></textarea>
-                    </div>
-                    <button id="submit-review" class="submit-btn">Submit Review</button>
-                </div>
-                
-                <!-- Display Area for Comments -->
-                <div class="comments-display">
-                    <h4>Recent Reviews</h4>
-                    <div class="comment-list">
-                        <!-- Sample comments - these would be dynamically loaded in a real implementation -->
-                        <div class="comment-item">
-                            <div class="comment-header">
-                                <span class="comment-author">Alex Johnson</span>
-                                <span class="comment-rating">★★★★★</span>
-                                <span class="comment-date">July 28, 2025</span>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="installation">Electrical Installation</option>
+                                <option value="repair">Repair Service</option>
+                                <option value="lighting">Lighting Design</option>
+                                <option value="emergency">Emergency Service</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <div class="form-group rating-input">
+                            <span>Rate our service:</span>
+                            <div class="stars">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1">★</label>
                             </div>
-                            <p class="comment-text">Excellent service! The lighting solutions completely transformed our living room.</p>
                         </div>
-                        <div class="comment-item">
-                            <div class="comment-header">
-                                <span class="comment-author">Sarah Miller</span>
-                                <span class="comment-rating">★★★★☆</span>
-                                <span class="comment-date">July 25, 2025</span>
-                            </div>
-                            <p class="comment-text">Very professional team. The installation was quick and efficient.</p>
-                        </div>
-                    </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </section>
+   <div class="pricing-container">
+        <h1>Electrical Service Plans</h1>
         
-        <!-- Contact Information -->
-        <div class="contact-info">
-            <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>123 Light Street, Bright City, BC 12345</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h2>Basic Inspection</h2>
+                <div class="price">$50<span>/visit</span></div>
+                <ul class="features">
+                    <li>Electrical system evaluation</li>
+                    <li>Outlet & switch testing</li>
+                    <li>Circuit breaker check</li>
+                    <li>Safety hazard identification</li>
+                    <li>Basic troubleshooting</li>
+                </ul>
+                <a href="#" class="btn">Book Inspection</a>
             </div>
-            <div class="info-item">
-                <i class="fas fa-phone"></i>
-                <p>(123) 456-7890</p>
+            
+            <div class="pricing-card popular">
+                <div class="popular-tag">Most Popular</div>
+                <h2>Standard Repair</h2>
+                <div class="price">$150<span>/weekly</span></div>
+                <ul class="features">
+                    <li>All Basic Inspection items</li>
+                    <li>Fixture installation/replacement</li>
+                    <li>Outlet/switch replacement</li>
+                    <li>Circuit breaker repairs</li>
+                    <li>1-year labor warranty</li>
+                </ul>
+                <a href="#" class="btn">Schedule Repair</a>
             </div>
-            <div class="info-item">
-                <i class="fas fa-envelope"></i>
-                <p>info@4lightup.com</p>
+            
+            <div class="pricing-card">
+                <h2>Emergency Service</h2>
+                <div class="price">$300<span>/Monthly</span></div>
+                <ul class="features">
+                    <li>24/7 emergency response</li>
+                    <li>Priority scheduling</li>
+                    <li>All Standard Repair services</li>
+                    <li>Power restoration</li>
+                    <li>2-hour response time guarantee</li>
+                </ul>
+                <a href="#" class="btn">Emergency Call</a>
+            </div>
+            
+            <div class="pricing-card">
+                <h2>Annual Maintenance</h2>
+                <div class="price">$1500<span>/year</span></div>
+                <ul class="features">
+                    <li>Two comprehensive inspections</li>
+                    <li>Priority service scheduling</li>
+                    <li>10% discount on repairs</li>
+                    <li>Smoke detector testing</li>
+                    <li>Whole-home electrical review</li>
+                </ul>
+                <a href="#" class="btn">Subscribe Now</a>
+            </div>
+        </div>
+        
+        <div class="payment-methods">
+            <h3>We Accept All Major Payment Methods</h3>
+            <div class="payment-icons">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196561.png" alt="Mastercard">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="American Express">
+                <img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="PayPal">
+                <img src="https://cdn-icons-png.flaticon.com/512/825/825426.png" alt="Apple Pay">
             </div>
         </div>
     </div>
-</section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-bolt text-yellow-400 mr-2"></i> Voltix Solutions
-                    </h3>
-                    <p class="text-gray-400">Providing safe and reliable electrical services since 2005.</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Light Up Electric</h3>
+                    <p>Providing quality electrical services for residential and commercial properties since 2018.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Contact</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Careers</a></li>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Electrical Installation</a></li>
+                        <li><a href="#">Lighting Solutions</a></li>
+                        <li><a href="#">Emergency Repairs</a></li>
+                        <li><a href="#">Panel Upgrades</a></li>
+                        <li><a href="#">Home Automation</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Electrical Installations</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Wiring & Rewiring</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Safety Inspections</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Emergency Repairs</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-yellow-400">Smart Home Solutions</a></li>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="features.html">Services</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-                    <address class="not-italic text-gray-400 space-y-2">
-                        <p><i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i> 123 Electric Ave, Power City</p>
-                        <p><i class="fas fa-phone text-yellow-400 mr-2"></i> (555) 123-4567</p>
-                        <p><i class="fas fa-envelope text-yellow-400 mr-2"></i> info@voltixsolutions.com</p>
-                        <p><i class="fas fa-clock text-yellow-400 mr-2"></i> Mon-Fri: 8AM - 6PM</p>
-                    </address>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Light up Uganda</li>
+                        <li>Namasuba near Total 2</li>
+                        <li>Phone +256 755 216 481</li>
+                        <li>Email: info@lightup.com</li>
+                    </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-                <p>© 2023 Voltix Solutions. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2025 Light Up Electric. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-   
+    <!-- Font Awesome for icons (add this before closing body tag) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/all.min.js"></script>
 </body>
 </html>
-
