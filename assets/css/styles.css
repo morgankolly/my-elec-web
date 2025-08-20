@@ -914,7 +914,7 @@
         
         .btn {
             display: inline-block;
-            background-color: #e74c3c;
+            background-color: yellow;
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 4px;
@@ -924,11 +924,11 @@
         }
         
         .btn:hover {
-            background-color: #c0392b;
+            background-color: #120301;
         }
         
         .popular {
-            border: 2px solid #e74c3c;
+            border: transparent;
             position: relative;
         }
         
@@ -964,3 +964,4 @@
             height: 30px;
             width: auto;
         }
+        
