@@ -933,12 +933,14 @@
         }
         
         .popular-tag {
-            position: absolute;
+            display: flex;
+            justify-content: center;
+            position: centered;
             top: -12px;
             right: 20px;
             background-color: #e74c3c;
             color: white;
-            padding: 0.3rem 1rem;
+            padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: bold;
