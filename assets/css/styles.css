@@ -914,7 +914,7 @@
         
         .btn {
             display: inline-block;
-            background-color: yellow;
+            background-color: rgb(10, 10, 9);
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 4px;
