@@ -1353,8 +1353,8 @@
             font-size: 0.9rem;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        Responsive Design
+        @media (max-width: 768px) 
             .nav-links {
                 display: none;
             }
