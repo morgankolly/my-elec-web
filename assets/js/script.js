@@ -122,3 +122,115 @@
                 });
             });
         });
+
+            document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                
+                // Basic validation
+                if (!email || !password) {
+                    showError('Please fill in all fields');
+                    return;
+                }
+                
+                if (!isValidEmail(email)) {
+                    showError('Please enter a valid email address');
+                    return;
+                }
+                
+                // Simulate login process
+                simulateLogin(email, password);
+            });
+            
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            
+            function showError(message) {
+                // Remove any existing error messages
+                removeError();
+                
+                // Create error element
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message';
+                errorDiv.style.color = 'red';
+                errorDiv.style.marginBottom = '15px';
+                errorDiv.style.padding = '10px';
+                errorDiv.style.backgroundColor = '#ffeeee';
+                errorDiv.style.border = '1px solid #ffdddd';
+                errorDiv.style.borderRadius = '5px';
+                errorDiv.textContent = message;
+                
+                // Insert error message
+                loginForm.insertBefore(errorDiv, loginForm.firstChild);
+                
+                // Remove error after 5 seconds
+                setTimeout(removeError, 5000);
+            }
+            
+            function removeError() {
+                const existingError = document.querySelector('.error-message');
+                if (existingError) {
+                    existingError.remove();
+                }
+            }
+            
+            function simulateLogin(email, password) {
+                // Show loading state
+                const loginButton = document.querySelector('.login-button');
+                const originalText = loginButton.textContent;
+                loginButton.textContent = 'Logging in...';
+                loginButton.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    // For demo purposes, assume login is successful
+                    // In a real application, you would make an API call to your server
+                    showSuccess('Login successful! Redirecting...');
+                    
+                    // Redirect to dashboard after successful login
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html'; // Change to your actual dashboard URL
+                    }, 1500);
+                    
+                    // Reset button (in case of error you would do this in the error handler)
+                    loginButton.textContent = originalText;
+                    loginButton.disabled = false;
+                }, 1500);
+            }
+            
+            function showSuccess(message) {
+                removeError();
+                
+                const successDiv = document.createElement('div');
+                successDiv.className = 'success-message';
+                successDiv.style.color = 'green';
+                successDiv.style.marginBottom = '15px';
+                successDiv.style.padding = '10px';
+                successDiv.style.backgroundColor = '#eeffee';
+                successDiv.style.border = '1px solid #ddffdd';
+                successDiv.style.borderRadius = '5px';
+                successDiv.textContent = message;
+                
+                loginForm.insertBefore(successDiv, loginForm.firstChild);
+                
+                setTimeout(() => {
+                    successDiv.remove();
+                }, 5000);
+            }
+            
+            // Add click events for social login buttons (for demonstration)
+            document.querySelectorAll('.social-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const platform = this.classList.contains('facebook') ? 'Facebook' : 
+                                    this.classList.contains('google') ? 'Google' : 'Twitter';
+                    alert(`Redirecting to ${platform} login...`);
+                });
+            });
+        });
