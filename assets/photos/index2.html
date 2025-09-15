@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boilerplate Site Structure</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --danger-color: #e74c3c;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Main Content Styles */
+        main {
+            padding: 2rem 0;
+            min-height: calc(100vh - 200px);
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        
+        .card {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        /* Admin Panel Styles */
+        .admin-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .admin-sidebar {
+            width: 250px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 1rem 0;
+        }
+        
+        .admin-sidebar h3 {
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .admin-menu {
+            list-style: none;
+        }
+        
+        .admin-menu li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .admin-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+        
+        .admin-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .admin-content {
+            flex: 1;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .admin-card {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .admin-table th,
+        .admin-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .admin-table th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .admin-container {
+                flex-direction: column;
+            }
+            
+            .admin-sidebar {
+                width: 100%;
+            }
+        }
+        
+        /* Tabs for demonstration */
+        .tabs {
+            display: flex;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab.active {
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Client Side -->
+    <div id="client-view">
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">Boilerplate Site</div>
+                    <ul class="nav-links">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="services.php">Services</a></li>
+                        <li><a href="portfolio.php">Portfolio</a></li>
+                        <li><a href="blog.php">Blog</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="#" onclick="showAdmin()">Admin Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1 class="page-title">Welcome to Our Boilerplate Site</h1>
+                
+                <div class="card">
+                    <h3>About Our Structure</h3>
+                    <p>This is a demonstration of how your boilerplate site structure could look. The site includes both client-facing pages and an admin panel.</p>
+                    <p>Click on "Admin Login" to see the admin panel preview.</p>
+                </div>
+                
+                <div class="tabs">
+                    <div class="tab active" onclick="switchTab('frontend')">Frontend Structure</div>
+                    <div class="tab" onclick="switchTab('backend')">Backend Structure</div>
+                </div>
+                
+                <div id="frontend" class="tab-content active">
+                    <div class="card">
+                        <h3>Client-Side Pages</h3>
+                        <ul>
+                            <li><strong>index.php</strong> - Homepage</li>
+                            <li><strong>about.php</strong> - About page</li>
+                            <li><strong>services.php</strong> - Services page</li>
+                            <li><strong>portfolio.php</strong> - Portfolio showcase</li>
+                            <li><strong>blog.php</strong> - Blog listing</li>
+                            <li><strong>post.php</strong> - Single blog post</li>
+                            <li><strong>contact.php</strong> - Contact form</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="backend" class="tab-content">
+                    <div class="card">
+                        <h3>Admin Panel Structure</h3>
+                        <ul>
+                            <li><strong>admin/index.php</strong> - Authentication page</li>
+                            <li><strong>admin/dashboard.php</strong> - Admin homepage</li>
+                            <li><strong>admin/posts.php</strong> - Manage blog posts</li>
+                            <li><strong>admin/services.php</strong> - Manage services</li>
+                            <li><strong>admin/portfolio.php</strong> - Manage portfolio</li>
+                            <li><strong>admin/use-cases.php</strong> - Manage use cases</li>
+                            <li><strong>admin/newsletter.php</strong> - Manage newsletter</li>
+                            <li><strong>admin/seo.php</strong> - Manage SEO metadata</li>
+                            <li><strong>admin/users.php</strong> - Manage users</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Directory Structure</h3>
+                        <ul>
+                            <li><strong>assets/</strong> - Global client-side assets (CSS, JS, images)</li>
+                            <li><strong>admin/assets/</strong> - Admin-specific assets</li>
+                            <li><strong>admin/controllers/</strong> - PHP controllers</li>
+                            <li><strong>admin/config/</strong> - DB connection, environment configs</li>
+                            <li><strong>admin/model/</strong> - Data models</li>
+                            <li><strong>admin/components/</strong> - Reusable admin UI parts</li>
+                            <li><strong>admin/helpers/</strong> - Utility functions</li>
+                            <li><strong>components/</strong> - Client-side reusable components</li>
+                            <li><strong>vendors/</strong> - External libraries</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2023 Boilerplate Site. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Admin Panel (Hidden by Default) -->
+    <div id="admin-view" style="display: none;">
+        <div class="admin-container">
+            <div class="admin-sidebar">
+                <h3>Admin Panel</h3>
+                <ul class="admin-menu">
+                    <li><a href="admin/dashboard.php">Dashboard</a></li>
+                    <li><a href="admin/posts.php">Posts</a></li>
+                    <li><a href="admin/services.php">Services</a></li>
+                    <li><a href="admin/portfolio.php">Portfolio</a></li>
+                    <li><a href="admin/use-cases.php">Use Cases</a></li>
+                    <li><a href="admin/newsletter.php">Newsletter</a></li>
+                    <li><a href="admin/seo.php">SEO</a></li>
+                    <li><a href="admin/users.php">Users</a></li>
+                    <li><a href="#" onclick="showClient()">Back to Site</a></li>
+                </ul>
+            </div>
+            
+            <div class="admin-content">
+                <div class="admin-header">
+                    <h2>Admin Dashboard</h2>
+                    <a href="#" class="btn" onclick="showClient()">Back to Site</a>
+                </div>
+                
+                <div class="admin-card">
+                    <h3>Quick Stats</h3>
+                    <p>This is a preview of how your admin dashboard could look.</p>
+                </div>
+                
+                <div class="admin-card">
+                    <h3>Recent Posts</h3>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sample Blog Post</td>
+                                <td>Admin User</td>
+                                <td>2023-06-15</td>
+                                <td>
+                                    <a href="#" class="btn">Edit</a>
+                                    <a href="#" class="btn" style="background: var(--danger-color)">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Another Post Example</td>
+                                <td>Editor</td>
+                                <td>2023-06-10</td>
+                                <td>
+                                    <a href="#" class="btn">Edit</a>
+                                    <a href="#" class="btn" style="background: var(--danger-color)">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAdmin() {
+            document.getElementById('client-view').style.display = 'none';
+            document.getElementById('admin-view').style.display = 'block';
+        }
+        
+        function showClient() {
+            document.getElementById('admin-view').style.display = 'none';
+            document.getElementById('client-view').style.display = 'block';
+        }
+        
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Update active tab
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

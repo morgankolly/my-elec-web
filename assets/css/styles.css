@@ -35,11 +35,7 @@
             align-items: center;
         }
         
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffcc00;
-        }
+       
         
         .nav-links {
             display: flex;
@@ -373,11 +369,6 @@
             color: #999;
             font-size: 14px;
         }
-
-
-    
-    
-
         /* Global Styles */
         * {
             margin: 0;
@@ -414,11 +405,6 @@
             padding: 20px 0;
         }
         
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff6b6b;
-        }
         
         .nav-links {
             display: flex;
@@ -1586,3 +1572,8 @@
             align-items: center;
             min-height: calc(100vh - 180px);
         }
+        a{
+             color: #ffcc00;
+             border: transparent;
+        }
+      
