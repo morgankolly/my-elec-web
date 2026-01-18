@@ -1,3 +1,8 @@
+<?php
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +17,10 @@
             <nav>
                 <div class="logo">Light Up Electric</div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -156,7 +161,7 @@
         <div class="container">
             <h2>Need Professional Electrical Services?</h2>
             <p>Contact us today for a free estimate and let our certified electricians handle all your electrical needs with expertise and care.</p>
-            <a href="contact.html" class="btn">Get a Free Quote</a>
+            <a href="contact.php" class="btn">Get a Free Quote</a>
         </div>
     </section>
 
@@ -172,11 +177,11 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="services.php">Services</a></li>
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="pricing.php">Pricing</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
                 
