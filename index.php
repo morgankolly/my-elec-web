@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once __DIR__ . '/my-elec-web/admin/config/connection.php';
-require_once  __DIR__ . '/my-elec-web/admin/controllers/UserController.php';
+require_once __DIR__ . '/my-elec-web/admin/controllers/UserController.php';
 require_once __DIR__ . '/my-elec-web/admin/controllers/CategoryController.php';
 require_once __DIR__ . '/my-elec-web/admin/controllers/NewsletterController.php';
 require_once __DIR__ . '/my-elec-web/admin/controllers/ContactController.php';
@@ -19,7 +19,7 @@ require_once __DIR__ . '/my-elec-web/admin/controllers/ContentController.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    
+
 
 <head>
     <meta charset="UTF-8">
@@ -189,8 +189,10 @@ require_once __DIR__ . '/my-elec-web/admin/controllers/ContentController.php';
                 <?php if (!empty($contents)): ?>
                     <?php foreach ($contents as $content): ?>
                         <div class="gallery-item">
-                            <img src="<?= htmlspecialchars($content['photo']) ?>"
-                                alt="<?= htmlspecialchars($content['title']) ?>">
+                            <a href="content.php?content_id=<?= (int) $content['content_id'] ?>">
+                                <img src="<?= htmlspecialchars($content['photo']) ?>"
+                                    alt="<?= htmlspecialchars($content['title']) ?>">
+                            </a>
                         </div>
 
                         <div id="gallery-cards">

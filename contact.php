@@ -3,14 +3,14 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once __DIR__ . '/../my-elec-website/my-elec-web/admin/config/connection.php';
-require_once __DIR__ . '/../my-elec-website/my-elec-web/admin/models/ContactModel.php';
+require_once __DIR__ . '/../my-elec-website/my-elec-web/admin/controllers/ContactController.php';
 
 $ContactModel = new ContactModel($pdo);
 $success = false;
 $error = false;
 
 if (isset($_POST['saveAndSendMessage'])) {
-
+ 
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
     $message = trim($_POST['message']);
@@ -72,19 +72,52 @@ if (isset($_POST['saveAndSendMessage'])) {
                 <?php endif; ?>
 
             <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p><strong>Address:</strong> Namasuba near Total 2</p>
-                    <p><strong>Phone:</strong> +256 755 216 481</p>
-                    <p><strong>Email:</strong> info@lightup.com</p>
-                    <p><strong>Hours:</strong> Sunday - Friday: 8am - 6pm<br>Emergency services available 24/7</p>
-                </div>
+    <div class="contact-info">
+        <h3>Get in Touch</h3>
+
+        <p>
+            <strong>Address:</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=Namasuba+near+Total+2"
+               target="_blank">
+                Namasuba near Total 2
+            </a>
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            <a href="tel:+256744802691">+256 744 802 691</a>
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+
+            <a href="mailto:lightup2567.com?subject=Customer%20Inquiry">
+    info@lightup2567.com
+</a>
+
+        </p>
+
+        <p>
+            <strong>Hours:</strong>
+            Sunday - Friday: 8am - 6pm<br>
+            Emergency services available 24/7
+        </p>
+
+        <p>
+            <strong>WhatsApp:</strong>
+            <a href="https://wa.me/256744802691" target="_blank">
+                Chat on WhatsApp
+            </a>
+        </p>
+    </div>
+
+
 
                 <div class="contact-form">
                     <form method="POST" action="">
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" name="name" required>
+                            <input type="text" name="contact_name" required>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
