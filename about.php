@@ -1,3 +1,15 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+$showModal = false;
+
+if (isset($_GET['quote']) && $_GET['quote'] === 'open') {
+    $showModal = true;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,20 +22,19 @@
       <header>
         <div class="container">
             <nav>
-                <div class="logo">Light Up Electric</div>
+                <div class="logo"> <a href="index.html"> Light Up Electric </a> </div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="about-hero">
+    <section class="hero">
         <div class="container">
             <h1>About Light Up Electric</h1>
             <p>Illuminating Your World Since 2018</p>
@@ -52,7 +63,7 @@
     </section>
 
     <!-- Our Values -->
-    <section class="section" style="background-color: #f5f7fa;">
+    <section class="section" style="background-color: #f2f2f2;">
         <div class="container">
             <div class="section-title">
                 <h2>Our Values</h2>
@@ -141,7 +152,9 @@
         <div class="container">
             <h2>Ready to Experience the Light Up Electric Difference?</h2>
             <p>Contact us today for a free consultation and quote</p>
-            <a href="contact.html" class="btn">Get a Free Quote</a>
+            <a href="?quote=open" class="btn">Get a Free Quote</a>
+           
+
         </div>
     </section>
 
@@ -151,5 +164,22 @@
             <p>&copy; 2025 Light Up Electric. All rights reserved.</p>
         </div>
     </footer>
+    <?php if ($showModal): ?>
+<div class="modal show">
+    <div class="modal-content">
+        <a href="index.php" class="close">&times;</a>
+
+        <h2>Request a Free Quote</h2>
+
+        <form method="POST" action="request-quote.php">
+            <input name="name" required>
+            <input name="email" required>
+            <textarea name="message" required></textarea>
+            <button type="submit">Get Free Quote</button>
+        </form>
+    </div>
+</div>
+<?php endif; ?>
+
 </body>
 </html>
