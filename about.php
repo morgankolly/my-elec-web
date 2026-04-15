@@ -18,7 +18,7 @@ if (isset($_GET['quote']) && $_GET['quote'] === 'open') {
     <title>About us</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="page-about">
       <header>
         <div class="container">
             <nav>

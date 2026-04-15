@@ -1519,3 +1519,58 @@ a {
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
+/* ------------------------------------------------------------
+   Header nav link hover + keyboard focus (site-wide)
+   NOTE: Kept at end to consistently override duplicated nav CSS.
+------------------------------------------------------------- */
+header .nav-links a,
+header nav ul li a {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 204, 0, 0.55);
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+header .nav-links a:hover,
+header .nav-links a:focus-visible,
+header nav ul li a:hover,
+header nav ul li a:focus-visible {
+  background-color: #ffcc00;
+  border-color: #ffcc00;
+  color: #0c4c8c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+header .nav-links a:focus-visible,
+header nav ul li a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.35);
+}
+
+header .nav-links a:active,
+header nav ul li a:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* About page: nav buttons hover/focus should be red */
+body.page-about header .nav-links a:hover,
+body.page-about header .nav-links a:focus-visible,
+body.page-about header nav ul li a:hover,
+body.page-about header nav ul li a:focus-visible {
+  background-color: #e53935;
+  border-color: #e53935;
+  color: #ffffff;
+}
+
+body.page-about header .nav-links a:focus-visible,
+body.page-about header nav ul li a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.35);
+}

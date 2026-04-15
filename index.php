@@ -17,6 +17,9 @@ require_once __DIR__ . '/my-elec-web/admin/controllers/ContentController.php';
 
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,17 +103,17 @@ require_once __DIR__ . '/my-elec-web/admin/controllers/ContentController.php';
                 <?php if (!empty($Messages)): ?>
                     <?php foreach ($Messages as $msg): ?>
                         <div class="testimonial">
+                            <div class="author-info">
+                                    <h4><?= htmlspecialchars($msg['contact_name']) ?></h4>
+                                     <p>Client</p>  
+                                </div>
                             <div class="testimonial-text">
                                 <p>"<?= nl2br(htmlspecialchars($msg['message'])) ?>"</p>
                             </div>
-                            <div class="testimonial-author">
-                                <div class="author-info">
-                                    <h4><?= htmlspecialchars($msg['contact_name']) ?></h4>
-                                    <p>Client</p>
-                                    <div class="rating">★★★★★</div>
-                                </div>
+
+                                 <div class="rating">⭐️⭐️⭐️⭐️⭐️</div>
                             </div>
-                        </div>
+
                     <?php endforeach; ?>
                 <?php else: ?>
                     <p class="text-center">No client testimonials found.</p>
